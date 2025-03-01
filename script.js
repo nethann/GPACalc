@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 let nameInput = document.createElement("input");
                 nameInput.type = "text";
-                nameInput.placeholder = "Assignment/Exam";
+                nameInput.placeholder = "Assignment name"; 
 
                 let gradeInput = document.createElement("input");
                 gradeInput.type = "number";
