@@ -1,9 +1,10 @@
+/* General Page Styling */
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: white;
 }
 
@@ -12,33 +13,44 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 500px;
+    height: 300px; /* Set fixed height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container h3 {
-    background-color: #2b5d94;
-    color: white;
-    padding: 5px;
-    text-align: center;
-    border-radius: 4px;
+.scroll-container {
+    max-height: 200px;
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .input-group {
     display: flex;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
 .input-group input {
-    width: 50%;
+    flex: 1; 
     padding: 5px;
-    margin-right: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    min-width: 0; 
 }
 
 .input-group input:last-child {
     width: 30%;
-    margin-right: 0;
 }
 
 .add-more {
@@ -47,13 +59,17 @@ body {
 }
 
 .add-more a {
+    display: inline-block;
     color: #2b5d94;
     text-decoration: none;
     font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
 }
 
-.final-grade {
-    margin-top: 15px;
+.add-more a:hover {
+    text-decoration: underline;
+    color: #1a3d73;
 }
 
 .button-container {
@@ -65,25 +81,17 @@ body {
 button {
     background-color: #4caf50;
     color: white;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 button:active {
-    background-color: #ccc;
-}
-
-
-
-.scroll-container {
-    max-height: 300px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    background-color: #3e8e41;
 }
