@@ -8,11 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         inputGroups.forEach((group, index) => {
             let inputs = group.querySelectorAll("input");
-            let values = Array.from(inputs).map(input => input.value);
 
             let rowData = {
                 index: index + 1,
-                values: values
+                assignment: inputs[0].value, 
+                grade: inputs[1].value, 
+                weight: inputs[2].value
             }
 
             inputData.push(rowData)
