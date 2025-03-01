@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <div>
             <label>Assignment/Exam</label>
-            <div class="input-group">
-                <input type="text" placeholder="Homework 1" >
-                <input type="number" placeholder="90" >
-                <input type="number" placeholder="5%" >
+
+            <!-- Wrapped all input groups inside scroll-container -->
+            <div class="scroll-container">
+                <div class="input-group">
+                    <input type="text" placeholder="Homework 1">
+                    <input type="number" placeholder="90">
+                    <input type="number" placeholder="% Weight">
+                </div>
+                <div class="input-group">
+                    <input type="text">
+                    <input type="number" placeholder="90">
+                    <input type="number" placeholder="% Weight">
+                </div>
+                <div class="input-group">
+                    <input type="text">
+                    <input type="number" placeholder="90">
+                    <input type="number" placeholder="% Weight">
+                </div>
             </div>
-            <div class="input-group">
-                <input type="text">
-                <input type="number">
-                <input type="number" placeholder="%">
-            </div>
-            <div class="input-group">
-                <input type="text">
-                <input type="number">
-                <input type="number" placeholder="%">
-            </div>
+
+            <!-- "Add More Rows" should be outside scroll-container -->
             <div class="add-more">
-                <a href="#">+ add more rows</a>
+                <a class="add-row" href="#">+ add more rows</a>
             </div>
         </div>
         <div class="button-container">
-            <button >Calculate</button>
+            <button class="calculate-btn">Calculate</button>
         </div>
     </div>
 </body>
+<script src="script.js"></script>
+
 </html>

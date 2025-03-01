@@ -6,6 +6,7 @@ body {
     height: 100vh;
     background-color: white;
 }
+
 .container {
     background: white;
     padding: 20px;
@@ -13,6 +14,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 350px;
 }
+
 .container h3 {
     background-color: #2b5d94;
     color: white;
@@ -20,10 +22,12 @@ body {
     text-align: center;
     border-radius: 4px;
 }
+
 .input-group {
     display: flex;
     margin-bottom: 10px;
 }
+
 .input-group input {
     width: 50%;
     padding: 5px;
@@ -31,27 +35,33 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 .input-group input:last-child {
     width: 30%;
     margin-right: 0;
 }
+
 .add-more {
     text-align: center;
     margin-top: 10px;
 }
+
 .add-more a {
     color: #2b5d94;
     text-decoration: none;
     font-weight: bold;
 }
+
 .final-grade {
     margin-top: 15px;
 }
+
 .button-container {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
+
 button {
     background-color: #4caf50;
     color: white;
@@ -60,6 +70,25 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+
 button:active {
     background-color: #ccc;
+}
+
+
+
+.scroll-container {
+    max-height: 300px;
+    /* Adjust height as needed */
+    overflow-y: auto;
+    /* Enables vertical scrolling */
+    border: 1px solid #ccc;
+    /* Optional for visibility */
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Ensure items stack properly */
+    gap: 10px;
+    /* Adds spacing between rows */
 }
