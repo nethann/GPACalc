@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         console.log("Add row is clicked");
 
-        // Creating new elements for add row
-
         for (let i = 0; i < 3; i++) {
             let newInputGroup = document.createElement("div");
             newInputGroup.className = "input-group";
@@ -38,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
             weightInput.type = "number";
             weightInput.placeholder = "% Weight";
 
-            // Appending the children
             newInputGroup.appendChild(nameInput);
             newInputGroup.appendChild(gradeInput);
             newInputGroup.appendChild(weightInput);
