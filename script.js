@@ -4,11 +4,29 @@ document.addEventListener("DOMContentLoaded", function () {
     function InputValues() {
         let inputGroups = document.querySelectorAll(".input-group");
 
+        let inputData = [];
+
         inputGroups.forEach((group, index) => {
             let inputs = group.querySelectorAll("input");
             let values = Array.from(inputs).map(input => input.value);
-            console.log(`Row ${index + 1}:`, values);
+
+            let rowData = {
+                index: index + 1,
+                values: values
+            }
+
+            inputData.push(rowData)
         });
+
+        console.log(inputData)
+
+        let button_container = document.querySelector(".button-container");
+
+        let grade_value = document.createElement("p");
+        grade_value.className = "grade_value";
+        grade_value.textContent = "Button triggered";
+
+        button_container.appendChild(grade_value);
     }
 
     let calculate_button = document.querySelector(".calculate-btn");
