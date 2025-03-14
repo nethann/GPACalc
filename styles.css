@@ -83,7 +83,11 @@ body {
     background-color: transparent;
 
     color: var(--clr-font-clr);
+
+    outline: none;
 }
+
+
 
 .input-group input:last-child {
     width: 30%;
