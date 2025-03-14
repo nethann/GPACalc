@@ -1,31 +1,42 @@
-
 body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+
+    background-image: url("./pattern.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container {
-    background: white;
+
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.1px);
+    -webkit-backdrop-filter: blur(1.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
-    height: 300px; 
+    width: 400px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .scroll-container {
     max-height: 200px;
-    overflow-y: auto; 
-    overflow-x: hidden; 
+    overflow-y: auto;
+    overflow-x: hidden;
     border: 1px solid #ccc;
     padding: 10px;
-    width: 100%; 
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -41,11 +52,11 @@ body {
 }
 
 .input-group input {
-    flex: 1; 
+    flex: 1;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    min-width: 0; 
+    min-width: 0;
 }
 
 .input-group input:last-child {
