@@ -16,18 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            if (!isNaN(grade) && !isNaN(weight) && weight > 0) {
-                let rowData = {
-                    index: index + 1,
-                    assignment: assignment,
-                    grade: grade,
-                    weight: weight
-                };
-                inputData.push(rowData);
 
-                totalWeightedGrade += grade * weight;
-                totalWeight += weight;
-            }
         });
 
         console.log("Collected Data:", inputData);
@@ -42,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
             grade_value.className = "grade_value";
             button_container.appendChild(grade_value);
         }
+
+
 
         // Update GPA display
         grade_value.textContent = `Calculated GPA: ${gpa}`;
