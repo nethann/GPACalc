@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let rowData = {
                 index: index + 1,
-                assignment: inputs[0].value, 
-                grade: inputs[1].value, 
+                assignment: inputs[0].value,
+                grade: inputs[1].value,
                 weight: inputs[2].value
             }
 
@@ -23,9 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let button_container = document.querySelector(".button-container");
 
-        let grade_value = document.createElement("p");
-        grade_value.className = "grade_value";
-        grade_value.textContent = "Button triggered";
+        // Check if the grade_value element already exists
+        let grade_value = document.querySelector(".grade_value");
+
+        if (!grade_value) {
+            grade_value = document.createElement("p");
+            grade_value.className = "grade_value";
+            button_container.appendChild(grade_value);
+        }
+
+        grade_value.textContent = "test!";
 
         button_container.appendChild(grade_value);
     }
@@ -45,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 let nameInput = document.createElement("input");
                 nameInput.type = "text";
-                nameInput.placeholder = "Assignment name"; 
+                nameInput.placeholder = "Assignment name";
 
                 let gradeInput = document.createElement("input");
                 gradeInput.type = "number";
