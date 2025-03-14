@@ -1,5 +1,4 @@
-# Upcoming google extension
-
+# GPA Calculator google extension
 
 16x16	Favicon on the extension's pages and context menu.
 32x32	Windows computers often require this size.
