@@ -130,6 +130,11 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
+
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 button:hover {
@@ -147,6 +152,7 @@ button:active {
     position: absolute;
     bottom: 0;
     right: 0;
+    transform: translateX(-5px); /* Moves left by 20px */
 }
 
 .github a {
@@ -158,6 +164,4 @@ button:active {
     font-style: normal;
 
     color: var(--clr-font-clr);
-
-    /* background-color: pink; */
 }
