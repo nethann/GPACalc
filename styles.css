@@ -1,5 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --clr-font-clr : #DCD7C9;
+    --clr-font-clr-hover: #dcd7c9b4;
+}
+
+
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,23 +26,34 @@ body {
     -webkit-backdrop-filter: blur(1.1px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 
-    color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    width: 550px;
     height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+}
+
+#assignment-exam{
+    font-size: 25px;
+
+
+    font-family: "Indie Flower", cursive;
+    font-weight: 600;
+    font-style: normal;
+
+    color: var(--clr-font-clr);
+
 }
 
 .scroll-container {
     max-height: 200px;
     overflow-y: auto;
     overflow-x: hidden;
-    border: 1px solid #ccc;
     padding: 10px;
     width: 100%;
     display: flex;
@@ -48,15 +67,22 @@ body {
     align-items: center;
     margin-bottom: 5px;
     flex-wrap: nowrap;
+    gap: 1em;
     width: 100%;
+
+    font-family: "Roboto Mono", monospace;
 }
 
 .input-group input {
     flex: 1;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccccccb7;
     border-radius: 4px;
     min-width: 0;
+
+    background-color: transparent;
+
+    color: var(--clr-font-clr);
 }
 
 .input-group input:last-child {
@@ -70,7 +96,7 @@ body {
 
 .add-more a {
     display: inline-block;
-    color: #2b5d94;
+    color: var(--clr-font-clr);
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
@@ -78,8 +104,8 @@ body {
 }
 
 .add-more a:hover {
-    text-decoration: underline;
-    color: #1a3d73;
+    text-decoration: none;
+    color: var(--clr-font-clr-hover);
 }
 
 .button-container {
@@ -90,8 +116,8 @@ body {
 }
 
 button {
-    background-color: #4caf50;
-    color: white;
+    background-color: #A27B5C;
+    color: black;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
@@ -100,9 +126,13 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: var(--clr-font-clr);
+    color: black;
 }
 
 button:active {
-    background-color: #3e8e41;
+    background-color: var(--clr-font-clr);
+    color: black;
 }
+
+
