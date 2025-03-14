@@ -4,7 +4,6 @@
 
 ## ✨ Features:
 - **Instant GPA Calculation** – Enter grades & credits, get your GPA instantly!  
-- **Supports Weighted & Unweighted GPAs** – Customize grading scales as needed.  
 - **User-Friendly Interface** – Simple, clean, and easy to use.  
 - **No Sign-Up Required** – Just install & start calculating!  
 - **Offline Functionality** – Works without internet access.  
