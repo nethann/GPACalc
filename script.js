@@ -16,7 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
+            inputData.push({ assignment, grade, weight });
 
+            totalWeightedGrade += grade * weight;
+            totalWeight += weight;
         });
 
         console.log("Collected Data:", inputData);
@@ -32,10 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
             button_container.appendChild(grade_value);
         }
 
-
-
         // Update GPA display
-        grade_value.textContent = `Calculated GPA: ${gpa}`;
+        grade_value.textContent = `Calculated GPA: ${gpa}%`;
     }
 
     let calculate_button = document.querySelector(".calculate-btn");
@@ -44,38 +45,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (addRow_button) {
         addRow_button.addEventListener("click", function (event) {
+            event.preventDefault();
+            console.log("Add row is clicked");
 
-            for (let i = 0; i < 3; i++) {
-                event.preventDefault();
-                console.log("Add row is clicked");
+            let newInputGroup = document.createElement("div");
+            newInputGroup.className = "input-group";
 
-                let newInputGroup = document.createElement("div");
-                newInputGroup.className = "input-group";
+            let nameInput = document.createElement("input");
+            nameInput.type = "text";
+            nameInput.placeholder = "Assignment Name";
 
-                let nameInput = document.createElement("input");
-                nameInput.type = "text";
-                nameInput.placeholder = "";
+            let gradeInput = document.createElement("input");
+            gradeInput.type = "number";
+            gradeInput.placeholder = "Grade";
+            gradeInput.min = "0";
+            gradeInput.max = "100";
 
-                let gradeInput = document.createElement("input");
-                gradeInput.type = "number";
-                gradeInput.placeholder = "";
-                gradeInput.min = "0";
-                gradeInput.max = "100";
+            let weightInput = document.createElement("input");
+            weightInput.type = "number";
+            weightInput.placeholder = "Weight (%)";
+            weightInput.min = "0";
+            weightInput.max = "100";
 
-                let weightInput = document.createElement("input");
-                weightInput.type = "number";
-                weightInput.placeholder = "";
-                weightInput.min = "0";
-                weightInput.max = "100";
+            newInputGroup.appendChild(nameInput);
+            newInputGroup.appendChild(gradeInput);
+            newInputGroup.appendChild(weightInput);
+            scrollContainer.appendChild(newInputGroup);
 
-                newInputGroup.appendChild(nameInput);
-                newInputGroup.appendChild(gradeInput);
-                newInputGroup.appendChild(weightInput);
-                scrollContainer.appendChild(newInputGroup);
-
-                scrollContainer.scrollTop = scrollContainer.scrollHeight;
-            }
-
+            scrollContainer.scrollTop = scrollContainer.scrollHeight;
         });
     } else {
         console.error("Error: '.add-row' button was not found in the DOM.");
